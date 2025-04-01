@@ -1,3 +1,4 @@
+# TODO: route53 and potentially Cloud front for custom domain
 resource "aws_api_gateway_rest_api" "things_api" {
   name        = "things_api"
   description = "API for managing things"

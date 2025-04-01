@@ -1,0 +1,27 @@
+graph TD
+    subgraph Legacy System
+        A[Core Process]
+    end
+
+    subgraph Cloud Native System
+        B[API Gateway]
+        C[Lambda Function]
+        D1[DynamoDB Table 1]
+        D2[DynamoDB Table 2]
+        D3[DynamoDB Table 3]
+    end
+
+    subgraph Monitoring System
+        E[Legacy API Calls]
+        F[Monitoring Service]
+        G[Variance S3 Bucket]
+    end
+
+    A --> E
+    B --> C
+    C --> D1
+    C --> D2
+    C --> D3
+    E --> F
+    F --> B
+    F --> G
